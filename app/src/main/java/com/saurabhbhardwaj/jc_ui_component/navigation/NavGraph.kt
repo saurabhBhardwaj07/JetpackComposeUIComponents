@@ -4,7 +4,9 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.saurabhbhardwaj.jc_ui_component.screens.AlertboxScreen
+import com.saurabhbhardwaj.jc_ui_component.screens.DatePickerScreen
 import com.saurabhbhardwaj.jc_ui_component.screens.HomeScreen
+import com.saurabhbhardwaj.jc_ui_component.screens.MaterialChipScreen
 
 @Composable
 fun NavGraph() {
@@ -16,6 +18,14 @@ fun NavGraph() {
 
         composable(route = Screens.AlertScreenRoute.route) {
             AlertboxScreen(navController)
+        }
+
+        composable(route = Screens.ChipsScreenRoute.route) {
+            MaterialChipScreen(navController)
+        }
+
+        composable(route = Screens.DatePickerScreenRoute.route) {
+            DatePickerScreen(navController)
         }
     }
 }

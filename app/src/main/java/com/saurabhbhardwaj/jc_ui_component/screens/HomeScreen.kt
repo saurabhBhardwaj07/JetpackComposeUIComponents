@@ -17,7 +17,7 @@ import com.saurabhbhardwaj.jc_ui_component.components.AppTopBar
 import com.saurabhbhardwaj.jc_ui_component.navigation.Screens
 import com.saurabhbhardwaj.jc_ui_component.ui.theme.JC_UI_ComponentTheme
 
-@OptIn(ExperimentalMaterial3Api::class)
+
 @Composable
 fun HomeScreen(navController: NavController) {
     Column(modifier = Modifier.fillMaxSize(), verticalArrangement = Arrangement.Top, content = {
@@ -34,17 +34,43 @@ fun HomeScreen(navController: NavController) {
                 )
             }
         )
+
+        ListItem(
+            modifier = Modifier.clickable {
+                navController.navigate(Screens.ChipsScreenRoute.route)
+            },
+            headlineContent = { Text("Compose Chips") },
+            trailingContent = {
+                Icon(
+                    imageVector = Icons.AutoMirrored.Filled.ArrowForwardIos,
+                    contentDescription = null
+                )
+            }
+        )
+
+        ListItem(
+            modifier = Modifier.clickable {
+                navController.navigate(Screens.DatePickerScreenRoute.route)
+            },
+            headlineContent = { Text("Compose Date Picker") },
+            trailingContent = {
+                Icon(
+                    imageVector = Icons.AutoMirrored.Filled.ArrowForwardIos,
+                    contentDescription = null
+                )
+            }
+        )
     })
 }
 
 
-@Preview(showBackground = true)
+@Preview(showBackground = true, apiLevel = 33)
 //@Preview(uiMode = UI_MODE_NIGHT_YES, showBackground = true)
 @Composable
 fun OnBoardingPagePreview() {
     val context = LocalContext.current
     val navController = remember { NavController(context) }
-    JC_UI_ComponentTheme() {
+    JC_UI_ComponentTheme {
         HomeScreen(
             navController = navController
         )

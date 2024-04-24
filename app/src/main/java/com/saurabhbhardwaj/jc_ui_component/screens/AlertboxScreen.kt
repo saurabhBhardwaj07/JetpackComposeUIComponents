@@ -168,7 +168,7 @@ fun CustomeAlertDialog(onDissmiss: () -> Unit) {
 }
 
 
-@Preview(showBackground = true)
+@Preview(showBackground = true , apiLevel = 33)
 //@Preview(uiMode = UI_MODE_NIGHT_YES, showBackground = true)
 @Composable
 fun AlertboxScreenPreview() {
