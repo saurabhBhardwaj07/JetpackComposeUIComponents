@@ -5,4 +5,7 @@ sealed class Screens(val route: String){
     object AlertScreenRoute : Screens(route = "Alert")
     object ChipsScreenRoute : Screens(route = "Chips")
     object DatePickerScreenRoute : Screens(route = "DatePicker")
+    object selectableUICompScreenRoute : Screens(route = "selectableUiComp")
+    object materialButtonScreenRoute : Screens(route = "materialButton")
+    object composeFormScreenRoute : Screens(route = "composeForm")
 }
